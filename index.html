@@ -21,7 +21,7 @@
 
     <script src="/socket.io/socket.io.js"></script>
       <script>
-        $(function() {
+        $(function () {
           var socket = io();
           $('form').submit(function(){
             socket.emit('chat message', $('#m').val());
