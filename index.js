@@ -13,10 +13,17 @@ io.on('connection', function(socket){
     io.emit('chat message', msg);
   });
 
+  socket.on('joined', function(username){
+    io.emit('joined', username )
+  })
+
+  socket.on('connect', function(){
+    console.log('user connected');
+  });
+
   socket.on('disconnect', function(){
     console.log('user disconnected');
   });
-
 
 });
 
